@@ -1,0 +1,19 @@
+.search-form {
+    width: 90vw;
+    max-width: 1000px;
+    margin: 5rem auto 3rem auto;
+}
+
+.form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #aaa;
+    max-width: 600px;
+    background: transparent;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #7d7c7c;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 1rem;
+}
