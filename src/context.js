@@ -5,11 +5,12 @@ import reducer from './reducer';
 
 const initialState = {
     isLoading: true,
+    originalCustomerData: [],
     customerData: [],
     query: '',
 }
 
-const API_ENDPOINT = 'http://localhost:3000'
+const API_ENDPOINT = 'http://localhost:5000/api'
 const AppContext=React.createContext();
 
 const AppProvider = ({children}) => {
@@ -22,7 +23,7 @@ const AppProvider = ({children}) => {
             const data= await response.json();
             dispatch({
                 type: 'SET_CUSTOMER_DATA',
-                payload: {customerData:data}
+                payload: data['customerData']
             })
         } catch (error) {
             console.log(error)
@@ -40,10 +41,9 @@ const AppProvider = ({children}) => {
     const handleComputingResources = (query) => {
         dispatch({type: 'HANDLE_COMPUTING_RESOURCES', payload: query})
     }
-
-    useEffect(()=> {
-        // Update the fetchData function based on the query
-    }, [state.query])
+    useEffect(()=>{
+        fetchData(`${API_ENDPOINT}/getCustomerData`);
+    }, [])
 
     return (
         <AppContext.Provider

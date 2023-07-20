@@ -1,0 +1,38 @@
+[
+	{
+		"subscriptionId": "DDF00277-147E-31C9-6D1E-5D5AAED04FE3, 291bba3f-e0a5-47bc-a099-3bdcb2a50a05, E9BD12E8-4BC7-76C2-5AC5-2DC7A186691A",
+		"customerId": "DC656250-2455-293C-6921-8C73C4C8D610",
+		"status": "ACTIVE",
+		"name": "Ferris Thornton"
+	},
+	{
+		"subscriptionId": "72ac930a-f34e-42d8-b06d-dc2a9e12ed71, DDF00277-147E-31C9-6D1E-5D5AAED04FE3, ED03EED7-9143-EC75-C8CE-C29900B54B82",
+		"customerId": "F7ACD669-D8AA-6589-9BB2-D91D6D0F1E21",
+		"status": "INACTIVE",
+		"name": "Deborah Burt"
+	},
+	{
+		"subscriptionId": "1D84E69B-B081-C875-FC43-21D235D02E9E, 17BD99E3-4BD2-B866-6E64-F24778DDDD2B",
+		"customerId": "A7A31856-6842-C45C-A6BA-63B56E117640",
+		"status": "ACTIVE",
+		"name": "Alexa Vaughn"
+	},
+	{
+		"subscriptionId": "1D84E69B-B081-C875-FC43-21D235D02E9E, 72ac930a-f34e-42d8-b06d-dc2a9e12ed71, 6C71CCD4-2778-9747-6C7C-E93894226D62",
+		"customerId": "86E737D2-2C72-BA59-B517-C6F8E31C04D4",
+		"status": "INACTIVE",
+		"name": "Clare Rosario"
+	},
+	{
+		"subscriptionId": "6C71CCD4-2778-9747-6C7C-E93894226D62",
+		"customerId": "60F67BD6-373E-321A-BBD3-3277D1A24CEF",
+		"status": "ACTIVE",
+		"name": "Hyatt Parsons"
+	},
+	{
+		"subscriptionId": "6C11232E-2B3B-050D-DA76-87452BB7B873, 17BD99E3-4BD2-B866-6E64-F24778DDDD2B, 72ac930a-f34e-42d8-b06d-dc2a9e12ed71",
+		"customerId": "67A64BE5-EF69-8BE3-4565-DBDA2BD59398",
+		"status": "INACTIVE",
+		"name": "Hedda Fuller"
+	}
+]

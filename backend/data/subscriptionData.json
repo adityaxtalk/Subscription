@@ -1,0 +1,122 @@
+[
+    {
+        "subscriptionId": "D815AC64-BA83-BE8C-13D1-7F2F3A21ED55",
+        "id": 1,
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 1",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "subscriptionId": "17BD99E3-4BD2-B866-6E64-F24778DDDD2B",
+        "id": 2,
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 2",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "subscriptionId": "DDF00277-147E-31C9-6D1E-5D5AAED04FE3",
+        "id": 3,
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 3",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 4,
+        "subscriptionId": "6C11232E-2B3B-050D-DA76-87452BB7B873",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 4",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 5,
+        "subscriptionId": "6C71CCD4-2778-9747-6C7C-E93894226D62",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 5",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 6,
+        "subscriptionId": "1D84E69B-B081-C875-FC43-21D235D02E9E",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 6",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 7,
+        "subscriptionId": "E9BD12E8-4BC7-76C2-5AC5-2DC7A186691A",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 7",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 8,
+        "subscriptionId": "ED03EED7-9143-EC75-C8CE-C29900B54B82",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 8",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 9,
+        "subscriptionId": "291bba3f-e0a5-47bc-a099-3bdcb2a50a05",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 9",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    },
+    {
+        "id": 10,
+        "subscriptionId": "72ac930a-f34e-42d8-b06d-dc2a9e12ed71",
+        "tenantId": "31c75423-32d6-4322-88b7-c478bdde4858",
+        "displayName": "Example Subscription 10",
+        "state": "Enabled",
+        "authorizationSource": "RoleBased",
+        "tags": {
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2"
+        }
+    }
+]

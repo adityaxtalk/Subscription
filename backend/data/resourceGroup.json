@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "DefaultResourceGroup-EUS",
+      "subscriptionId": "D815AC64-BA83-BE8C-13D1-7F2F3A21ED55, 6C11232E-2B3B-050D-DA76-87452BB7B873, DDF00277-147E-31C9-6D1E-5D5AAED04FE3, 6C71CCD4-2778-9747-6C7C-E93894226D62, E9BD12E8-4BC7-76C2-5AC5-2DC7A186691A, 1D84E69B-B081-C875-FC43-21D235D02E9E",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "eastus",
+      "properties": {
+        "provisioningState": "Succeeded"
+      },
+      "tags": {
+        "tagKey1": "tagValue1",
+        "tagKey2": "tagValue2"
+      }
+
+    },
+    {
+      "id": 2,
+      "subscriptionId": "72ac930a-f34e-42d8-b06d-dc2a9e12ed71, D815AC64-BA83-BE8C-13D1-7F2F3A21ED55, E9BD12E8-4BC7-76C2-5AC5-2DC7A186691A, 6C11232E-2B3B-050D-DA76-87452BB7B873, 291bba3f-e0a5-47bc-a099-3bdcb2a50a05",
+      "name": " testsamples-rg",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "westus",
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    },
+    {
+      "id": 3,
+      "subscriptionId": "6C71CCD4-2778-9747-6C7C-E93894226D62, 1D84E69B-B081-C875-FC43-21D235D02E9E, ED03EED7-9143-EC75-C8CE-C29900B54B82, E9BD12E8-4BC7-76C2-5AC5-2DC7A186691A",
+      "name": "dev-apps-rg",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "eastus",
+      "tags": {},
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    },
+    {
+      "id": 4,
+      "subscriptionId": "291bba3f-e0a5-47bc-a099-3bdcb2a50a05",
+      "name": "apiapps-sindia-rg",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "southindia",
+      "tags": {},
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    },
+    {
+      "id": 5,
+      "subscriptionId": "1D84E69B-B081-C875-FC43-21D235D02E9E, 72ac930a-f34e-42d8-b06d-dc2a9e12ed71, D815AC64-BA83-BE8C-13D1-7F2F3A21ED55, DDF00277-147E-31C9-6D1E-5D5AAED04FE3, ED03EED7-9143-EC75-C8CE-C29900B54B82",
+      "name": "cloud-shell-storage-centralindia",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "centralindia",
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    },
+    {
+      "id": 6,
+      "subscriptionId": "72ac930a-f34e-42d8-b06d-dc2a9e12ed71, DDF00277-147E-31C9-6D1E-5D5AAED04FE3, 291bba3f-e0a5-47bc-a099-3bdcb2a50a05, 6C11232E-2B3B-050D-DA76-87452BB7B873",
+      "name": "userapps-rg",
+      "type": "Microsoft.Resources/resourceGroups",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "{'Dept': 'AppInnovation', 'Environment': 'LearninPath'}",
+        "AutoStop": "True",
+        "Service": "SNP-POCs"
+      },
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    }
+  ]

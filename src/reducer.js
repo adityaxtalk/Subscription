@@ -7,16 +7,19 @@ const reducer = (state, action) => {
                 isLoading: true
             }
         case 'SET_CUSTOMER_DATA':
-            return {
+        return {
                 ...state,
                 isLoading: false,
-                data: action.payload.data,
+                customerData: action.payload,
+                originalCustomerData: action.payload
             }
         case 'HANDLE_SEARCH':
+            const query=action.payload.toLowerCase();
             return {
                 ...state,
+                customerData: state.originalCustomerData.filter((item)=> item.name.toLowerCase().indexOf(query) > -1),
                 isLoading: false,
-                data: action.payload.data,
+                query,
             }
         case 'HANDLE_SUBSCRIPTION':
             return {
