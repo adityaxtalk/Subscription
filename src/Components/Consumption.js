@@ -89,7 +89,11 @@ function Consumption({subscriptionId}) {
           <div className={classes.visual}>
             <BarChart chartData={barChartData}/>
           </div>
-        </section>}
+        </section>
+      }
+      {
+        !isLoading && !lineChartData && !pieChartData && !barChartData && <h3 style={{textAlign: 'center'}}>Oops! Unable to retrive analytics</h3>
+      }
     </>
   )
 }
