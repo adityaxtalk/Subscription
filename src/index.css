@@ -22,9 +22,15 @@ ul {
 }
 
 li {
-  margin-bottom: 1rem;
+  max-width: 1000px;
+  margin: 0 auto 1rem auto;
 }
+
 
 a {
   text-decoration: none;
+}
+
+.loading {
+  text-align: center;
 }

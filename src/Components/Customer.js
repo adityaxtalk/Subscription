@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from './Customer.module.css';
-import Subscription from "./Subscription";
+import SubscriptionList from "./SubscriptionList";
 
 function Customer(props) {
   const data=props.data;
@@ -17,7 +17,7 @@ function Customer(props) {
                 {expand ? '-': '+'}
             </button>
         </div>
-        {expand && <Subscription subscription={data}/>}        
+        {expand && <SubscriptionList customerId={data.customerId}/>}        
       </li>
   )
 }
