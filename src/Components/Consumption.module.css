@@ -1,0 +1,8 @@
+.visual__graph {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.visual {
+    margin: 0 auto;
+}

@@ -43,7 +43,6 @@ router.get('/getConsumptionDetail/:subscriptionId', async (req, res, next)=>{
         const {subscriptionId, ...detail} = subscription;
         return detail
 });
-   console.log(data);
     res.status(201).json({success: 'success', consumptionData: data});
 });
 

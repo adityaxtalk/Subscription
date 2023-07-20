@@ -34,20 +34,14 @@ const AppProvider = ({children}) => {
         dispatch({type: 'HANDLE_SEARCH', payload: query})
     }
 
-    const handleSubscriptions = (query) => {
-        dispatch({type: 'HANDLE_SUBSCRIPTION', payload: query})
-    }
-
-    const handleComputingResources = (query) => {
-        dispatch({type: 'HANDLE_COMPUTING_RESOURCES', payload: query})
-    }
+   
     useEffect(()=>{
         fetchData(`${API_ENDPOINT}/getCustomerData`);
     }, [])
 
     return (
         <AppContext.Provider
-                value={{...state, handleSearch, handleComputingResources, handleSubscriptions }}
+                value={{...state, handleSearch}}
         >
             {children}
         </AppContext.Provider>

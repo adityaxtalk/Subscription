@@ -21,18 +21,6 @@ const reducer = (state, action) => {
                 isLoading: false,
                 query,
             }
-        case 'HANDLE_SUBSCRIPTION':
-            return {
-                ...state,
-                isLoading: false,
-                data: action.payload.data,
-            }
-        case 'HANDLE_COMPUTING_RESOURCES':
-            return {
-                ...state,
-                isLoading: false,
-                data: action.payload.data,
-            }
         default: 
             throw new Error(`no matching "${action.type}" action type`);
     }
