@@ -1,8 +1,14 @@
 .visual__graph {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
 }
 
 .visual {
-    margin: 0 auto;
+    margin: 10px auto;
+}
+
+@media screen and (min-width: 767px) {
+    .visual__graph {
+        grid-template-columns: auto auto;
+    }
 }
