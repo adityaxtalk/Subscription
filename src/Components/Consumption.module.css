@@ -1,6 +1,6 @@
 .visual__graph {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
 }
 
 .visual {
@@ -17,4 +17,11 @@
     padding: 10px;
     border-radius: 15px;
     background: rgba(170, 170, 170, 0.5);
+    margin: 10px auto;
+}
+
+@media screen and (min-width: 767px) {
+    .visual__graph {
+        grid-template-columns: auto auto;
+    }
 }
