@@ -5,12 +5,15 @@ import reducer from './reducer';
 
 const initialState = {
     isLoading: true,
-    originalCustomerData: [],
+    subscriptions: [],
     customerData: [],
-    query: '',
+    isSubscriptionDataLoading: true,
+    isConsumptionDataLoading: false,
+    consumptionData: [],
+    isCustomerOptionSelected: false,
 }
 
-const API_ENDPOINT = 'http://localhost:5000/api'
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
 const AppContext=React.createContext();
 
 const AppProvider = ({children}) => {
@@ -30,18 +33,48 @@ const AppProvider = ({children}) => {
         }
     }
 
-    const handleSearch = (query) => {
-        dispatch({type: 'HANDLE_SEARCH', payload: query})
+    const handleSubscriptions = async (customerId) =>{
+        dispatch({ type: 'SET_SUBSCRIPTION_LOADING' })
+        try {
+            const url = `${API_ENDPOINT}/api/getSubscriptionData/${customerId}`;
+            const response = await fetch(url);
+            const data=await response.json();
+            dispatch({type: 'HANDLE_SUBSCRIPTIONS', payload: data});
+        } catch (error) {
+            console.log(error);
+        }
     }
 
-   
+    const fetchConsumptionData = async (subscriptionId) =>{
+        dispatch({ type: 'SET_CONSUMPTION_LOADING' })
+        try {
+            let consumption = await fetch(`${API_ENDPOINT}/api/getConsumptionDetail/${subscriptionId}`);
+            consumption= await consumption.json()
+            consumption=consumption.consumptionData;
+            let resource= await fetch(`${API_ENDPOINT}/api/getResourceGroups/${subscriptionId}`);
+            resource= await resource.json();
+            resource=resource.resourceData;
+            const mergedData=[]
+            for (let i = 0; i<consumption.length; i++) {
+                const {id, ...temp}={
+                    ...consumption[i],
+                    ...resource.find(item => consumption[i].id === item.resourceGroupId)
+                }
+                mergedData.push(temp)
+             }
+             console.log(mergedData)
+             dispatch({type: 'HANDLE_CONSUMPTIONS', payload: mergedData});
+        } catch (error) {
+            console.log(error);
+        }
+    }
     useEffect(()=>{
-        fetchData(`${API_ENDPOINT}/getCustomerData`);
+        fetchData(`${API_ENDPOINT}/api/getCustomerData`);
     }, [])
 
     return (
         <AppContext.Provider
-                value={{...state, handleSearch}}
+                value={{...state, handleSubscriptions, fetchConsumptionData}}
         >
             {children}
         </AppContext.Provider>

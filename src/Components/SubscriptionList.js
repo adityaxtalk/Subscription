@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import classes from './SubscriptionList.module.css';
-import Subscription from './Subscription';
+import React from 'react';
 
-function SubscriptionList({customerId}) {
-  const [isLoading, setLoading] = useState(true);
-  const [subscriptions, setSubscriptions]=useState([]);
-  useEffect(()=>{
-    fetch(`http://localhost:5000/api/getSubscriptionData/${customerId}`).then((data)=> data.json()).then((res)=>{
-      setSubscriptions(res.subscriptionData);
-      setLoading(false);
-    });
-  }, [customerId]);
+import { useGlobalContext } from '../context';
+
+function SubscriptionList() {
+  const {subscriptions, fetchConsumptionData, isCustomerOptionSelected, isSubscriptionDataLoading} = useGlobalContext();
   return (
     <>
-      {isLoading && <h3 className="loading"> Loading... </h3>}
-      {!isLoading && <ul className={classes['subscription-modal']}>
-        {
-            subscriptions.map((subscriptionData) => 
-                <Subscription data={subscriptionData} key={subscriptionData.subscriptionId}
-            />)
-        }
-      </ul>}
+    {!isCustomerOptionSelected && <h3 className="loading">Please select customer to get the subscription details.</h3>}
+    {isSubscriptionDataLoading &&  isCustomerOptionSelected && <h3 className="loading">Loading Subscription Data....</h3>}
+      {!isSubscriptionDataLoading && isCustomerOptionSelected &&
+        <>
+              <label htmlFor='subscriptionList'>Select subscription from below options: </label>
+              <select onChange={(e)=> fetchConsumptionData(e.target.value)} id="subscriptionList" className='select_menu'>
+                  <option value="">Select an option....</option>
+                  {
+                    subscriptions.map((data) => {
+                        return <option key={data.subscriptionId} value={data.subscriptionId}>{data.displayName}</option>
+                    })
+                  }
+              </select>
+        </>
+      }
     </>
   )
 }

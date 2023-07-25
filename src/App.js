@@ -1,11 +1,20 @@
 import CustomerList from "./Components/CustomerList";
-import FilterForm from "./Components/FilterForm";
+import SubscriptionList from "./Components/SubscriptionList";
+import Consumption from "./Components/Consumption";
 
 function App() {
   return (
     <>
-      <FilterForm/>
-      <CustomerList/>
+     <section>
+        <CustomerList/>
+     </section>
+     <section>
+        <SubscriptionList/>
+     </section>
+      <section>
+        <Consumption/>
+      </section>
+      
     </>
   );
 }

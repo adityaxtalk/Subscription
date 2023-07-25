@@ -6,3 +6,15 @@
 .visual {
     margin: 0 auto;
 }
+
+.consumption_Container {
+    width: 90vw;
+    height: fit-content;
+    box-sizing: border-box;
+    border: 2px solid #F6F2FA;
+    margin: 0 auto;
+    box-shadow: 2px 1px #aaa;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(170, 170, 170, 0.5);
+}

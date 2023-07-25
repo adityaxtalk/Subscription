@@ -11,15 +11,29 @@ const reducer = (state, action) => {
                 ...state,
                 isLoading: false,
                 customerData: action.payload,
-                originalCustomerData: action.payload
             }
-        case 'HANDLE_SEARCH':
-            const query=action.payload.toLowerCase();
+        case 'SET_SUBSCRIPTION_LOADING':
             return {
                 ...state,
-                customerData: state.originalCustomerData.filter((item)=> item.name.toLowerCase().indexOf(query) > -1),
-                isLoading: false,
-                query,
+                isCustomerOptionSelected: true,
+                isSubscriptionDataLoading: true
+            }
+        case 'HANDLE_SUBSCRIPTIONS':
+            return {
+                ...state,
+                isSubscriptionDataLoading: false,
+                subscriptions: action.payload.subscriptionData
+            }
+        case 'SET_CONSUMPTION_LOADING':
+            return {
+                ...state,
+                isConsumptionDataLoading: true,
+            }
+        case 'HANDLE_CONSUMPTIONS':
+            return {
+                ...state,
+                isConsumptionDataLoading: false,
+                consumptionData: action.payload
             }
         default: 
             throw new Error(`no matching "${action.type}" action type`);

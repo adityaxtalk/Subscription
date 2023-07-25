@@ -1,9 +1,13 @@
 const apiRoutes=require('./routes/api_routes');
 const express=require('express');
+const path=require('path');
 
+// Path to our .env file
+require('dotenv').config({path: path.resolve(__dirname, '../.env')});
 
 const app=express();
-const PORT=5000;
+const PORT=process.env.NODE_PORT || 5000;
+const HOST=process.env.NODE_HOST || 'localhost';
 
 
 app.use((req, res, next)=>{
@@ -14,6 +18,6 @@ app.use((req, res, next)=>{
 
 app.use(apiRoutes);
 
-app.listen(PORT, ()=>{
-    console.log(`The Server is running on port ${PORT}`);
+app.listen(PORT, HOST, ()=>{
+    console.log(`The Server is running at http://${HOST}:${PORT}/`);
 })
