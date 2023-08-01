@@ -10,7 +10,7 @@ function CustomerList() {
         <>
             <label htmlFor='customerOptions'>Select Customer from below options: </label>
             <select onChange={(e)=> handleSubscriptions(e.target.value)} id="customerOptions" className='select_menu'>
-                <option value="">Select an option....</option>
+                <option disabled selected value>-- Select an option --</option>
                 {
                   customerData.map((data) => {
                     return <option key={data.customerId} value={data.customerId}>{data.name}</option>

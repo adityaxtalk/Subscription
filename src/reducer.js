@@ -22,7 +22,8 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 isSubscriptionDataLoading: false,
-                subscriptions: action.payload.subscriptionData
+                subscriptions: action.payload.subscriptionData,
+                consumptionData: []
             }
         case 'SET_CONSUMPTION_LOADING':
             return {

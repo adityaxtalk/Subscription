@@ -12,7 +12,7 @@ function SubscriptionList() {
         <>
               <label htmlFor='subscriptionList'>Select subscription from below options: </label>
               <select onChange={(e)=> fetchConsumptionData(e.target.value)} id="subscriptionList" className='select_menu'>
-                  <option value="">Select an option....</option>
+                  <option disabled selected value>--Select an option--</option>
                   {
                     subscriptions.map((data) => {
                         return <option key={data.subscriptionId} value={data.subscriptionId}>{data.displayName}</option>

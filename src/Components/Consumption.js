@@ -12,7 +12,6 @@ function Consumption({subscriptionId}) {
    const [barChartData, setBarChartData] = useState(null);
    const [barChartData2, setBarChartData2]=useState(null);
    useEffect(()=>{
-    debugger
     if (consumptionData.length > 0) {
       setPieChartData({
         labels: consumptionData.map((data)=> data.resourcelocation),
